@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script src="https://kit.fontawesome.com/a14ae32021.js " crossorigin="anonymous"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>per la mia bimba ❤</title>
+
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+
+<div id="mainDiv">
+    <div id="content">
+        <div id="code">
+            <span class="comments">/**</span><br />
+            <span class="space"/><span class="comments">*IL CODICE DELL'AMORE</span><br />
+            <span class="space"/><span class="comments">*/</span><br />
+            Ciao bimba!<br />
+            Ricordi il primo giorno che ci siamo scritti?<br />
+            <span class="comments">// 8 Dicembre 2024. </span><br />
+            Da quel giorno è scoppiata una scintilla;<br />
+            <span class="comments">//Il tuo modo di fare, il tuo aspetto, le tue parole</span><br />
+            Tutto ciò è rimasto impresso nel mio cuoricino;<br />
+            Col passare del tempo;<br />
+            Tutto ciò è diventato sempre più forte e bello;<br />
+            Giorno dopo giorno mi sentivo sempre più innamorato di te;<br />
+            Certo,la distanza è stata e sarà un grande ostacolo;<br />
+            Ma noi la combatteremo insieme,no?;<br />
+            Ci sono state litigate;<br />
+            Discussioni;<br />
+            Volte in cui non ci siamo rivolti la parola per un'ora intera<br />
+            Ma tuttò ciò ha rafforzato il nostro legame,no?<br />
+            <span class="comments">// E ce ne saranno altre</span><br />
+            Ma il nostro legame sarà sempre più forte;<br />
+            <br /><br />
+            Tutto quello che voglio dire è che:<br />
+            bimba, ti amo e ti amerò per sempre;<br />
+            <br /><br />
+            tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo tiamo<br />
+            <br />
+            <span id="heartspan">
+                <a href="image.jpg"><i class="fas fa-heart" id="icon"></i></a>
+            </span>
+        </div>
+
+        <div id="loveHeart">
+            <canvas id="garden"></canvas>
+            <div id="words">
+                <div id="messages">
+                    <div id="elapseClock"></div>
+                </div>
+                <div id="loveu">
+                    ti amo cosi tanto<br/>
+                    <div class="signature">- davide</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TIMELINE -->
+<section id="timeline">
+    <div class="timeline-item">
+        <div class="date">8 dicembre 2024</div>
+        <div class="line"></div>
+        <div class="description">Primo messaggio su Whatsapp</div>
+    </div>
+    <div class="timeline-item">
+        <div class="date">26 gennaio 2025</div>
+        <div class="line"></div>
+        <div class="description">fidanzamento❤</div>
+    </div>
+    <div class="timeline-item">
+        <div class="date">26 aprile 2025</div>
+        <div class="line"></div>
+        <div class="description">Prima volta insieme e primo bacino</div>
+    </div>
+    <div class="timeline-item">
+        <div class="date">7-8 giugno 2025</div>
+        <div class="line"></div>
+        <div class="description">ci rivediamo,ninna insieme</div>
+    </div>
+    <div class="timeline-item">
+        <div class="date">?</div>
+        <div class="line"></div>
+        <div class="description">Chissà cosa avrà il futuro per noi</div>
+        <button id="futureButton">Scopri il futuro ❤</button>
+        <div id="futureMessage" class="future-message"></div>
+    </div>
+</section>
+
+<!-- SPAZIO PER SCROLL FINALE -->
+<div id="timeline-end"></div>
+
+<!-- Contenitore dei fiorellini e cuoricini -->
+<div id="floating-icons"></div>
+<!-- Pulsante per iniziare il gioco -->
+<div style="text-align: center; margin: 60px 0;">
+    <a href="loading/index.html">
+        <button style="padding: 15px 30px; font-size: 18px; background: #ff6699; color: white; border: none; border-radius: 25px; cursor: pointer; transition: 0.3s; box-shadow: 0 4px 10px rgba(255, 102, 153, 0.3);">
+            Entra nel gioco ❤
+        </button>
+    </a>
+</div>
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2025, 0, 26);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+    var msg = document.createElement("div");
+    msg.id = "errorMsg";
+    msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+    document.body.appendChild(msg);
+    $("#code").css("display", "none")
+    $("#copyright").css("position", "absolute");
+    $("#copyright").css("bottom", "10px");
+    document.execCommand("stop");
+} else {
+    setTimeout(function () {
+        startHeartAnimation();
+    }, 5000);
+
+    timeElapse(together);
+    setInterval(function () {
+        timeElapse(together);
+    }, 500);
+
+    adjustCodePosition();
+    $("#code").typewriter();
+}
+</script>
+
+
+
+</body>
+</html>

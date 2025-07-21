@@ -1,0 +1,102 @@
+body {
+	padding: 2rem;
+	font-family: -apple-system, BlinkMacSystemFont, "Arial", sans-serif;
+}
+
+h1 {
+	font-size: 16px;
+	margin-top: 0;
+}
+
+p {
+	color: rgb(107, 114, 128);
+	font-size: 15px;
+	margin-bottom: 10px;
+	margin-top: 5px;
+}
+
+.card {
+	max-width: 620px;
+	margin: 0 auto;
+	padding: 16px;
+	border: 1px solid lightgray;
+	border-radius: 16px;
+}
+
+.card p:last-child {
+	margin-bottom: 0;
+}
+
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .blink {
+            animation: blink 1s step-end infinite;
+        }
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: 1px;
+            animation: typing 3.5s steps(40, end);
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        .scanline {
+            position: absolute;
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(
+                0deg,
+                rgba(0, 255, 0, 0) 0%,
+                rgba(0, 255, 51, 0.1) 50%,
+                rgba(0, 255, 0, 0) 100%
+            );
+            animation: scan 8s linear infinite;
+            pointer-events: none;
+        }
+        @keyframes scan {
+            0% {
+                top: -100px;
+            }
+            100% {
+                top: 100%;
+            }
+        }
+        .glitch {
+            position: relative;
+        }
+        .glitch::before, .glitch::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch::before {
+            color: #0ff;
+            z-index: -1;
+            animation: glitch-effect 3s infinite;
+        }
+        .glitch::after {
+            color: #f0f;
+            z-index: -2;
+            animation: glitch-effect 2s infinite reverse;
+        }
+        @keyframes glitch-effect {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(-2px, -2px); }
+            60% { transform: translate(2px, 2px); }
+            80% { transform: translate(2px, -2px); }
+            100% { transform: translate(0); }
+        }
+        .console-text {
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+        }
